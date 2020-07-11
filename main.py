@@ -76,4 +76,3 @@ def house(height_rectangle, width):
 turtle.bgcolor("#8888FF")
 
 house(10000, 10000)
-rectangle(120, 300)
