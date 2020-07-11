@@ -92,7 +92,8 @@ while True:
     print(" <I>: Isosceles_triangle")
     print(" <H>: House")
     print(" other go up one layer")
-    shape_input = input()
+    shape_input = str.upper(input())
+    # Rectangle
     if shape_input == "R":
       print("")
       print("What horizontal size should your rectangle have?")
@@ -113,3 +114,16 @@ while True:
           print("Please use an even number.")
       print("Your rectangle is now beeing drawn.")
       rectangle(shape_input_rectangle_hor, shape_input_rectangle_ver)
+      #Circle
+    elif shape_input == "C":
+      print("")
+      print("What size should your circle have?")
+      while True:
+        shape_input_circle = input()
+        try:
+          shape_input_circle = int(shape_input_circle)
+          break
+        except:
+          print("Please use an even number.")
+      print("Your circle is now beeing drawn.")
+      turtle.circle(shape_input_circle)
