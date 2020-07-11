@@ -73,14 +73,13 @@ def house(height_rectangle, width):
   turtle.down()
   turtle.pencolor("#000000")
   rectangle(-width/3, -height_rectangle/2)
-turtle.bgcolor("#8888FF")
 
 # -----UI-----
 
 while True:
   print("")
   print("Welcome to the Turtle Demo.")
-  print("Press <D> to draw a shape, <F> to freehand with arrow keys or press <Q> to quit.")
+  print("Press <D> to draw a shape, <F> to freehand with arrow keys, <C> to change colors or press <Q> to quit.")
   welcome_input = input()
   if welcome_input == "D":
     print("")
@@ -137,5 +136,33 @@ while True:
           break
         except:
           print("Please use an even number.")
-      print("Your Square is beeing drawn.")
+      print("Your square is beeing drawn.")
       square(shape_input_square)
+    # Triangle
+    elif shape_input == "T":
+      print("")
+      print("What length should line A have on your triangle?")
+      shape_input_triangle_a = input()
+      while True:
+        try:
+          shape_input_triangle_a = int(shape_input_triangle_a)
+          break
+        except:
+          print("Please do only use even numbers.")
+      print("What length should line B have on your triangle?")
+      shape_input_triangle_b = input()
+      while True:
+        try:
+          shape_input_triangle_b = int(shape_input_triangle_b)
+          break
+        except:
+          print("Please do only use even numbers.")
+      print("What angle should be inbetween line A and B?")
+      shape_input_triangle_angle = input()
+      while True:
+        try:
+          shape_input_triangle_angle = int(shape_input_triangle_angle)
+          break
+        except:
+          print("Please do only use even numbers.")
+      print("Your triangle is beeing drawn.")
