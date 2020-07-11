@@ -14,6 +14,8 @@ s = turtle.getscreen()
 # Der Befehl left/lt dreht die Turtle nach links
 #turtle.lt(0)
 
+# ----- Basis Formen -----
+
 # Die Fukltion square lässt die Turtle ein Viereck der Größe x Zeichnen
 # @param size ist die Seitenlänge des Quadrats
 def square(size):
@@ -56,6 +58,8 @@ def triangle(size_a, size_b, angle):
   turtle.fd(size_b)
   turtle.goto(start)
 
+# ----- Zusammengesetze Formen -----
+
 # Die Funktion house zeichnet ein Rechteck mit aufgesetztem Dreieck
 # @param height_rectangle: Die Höhe des Rechtecks
 # @param width: Die Breite des Hauses
@@ -74,6 +78,7 @@ def house(height_rectangle, width):
   turtle.pencolor("#000000")
   rectangle(-width/3, -height_rectangle/2)
 
+<<<<<<< HEAD
 # Die Funktion check_int konvertiert Strings, Floats oder Binärwerte in Integer, wenn dies möglich ist.
 # Sollte es nicht möglich sein, wird nochmal nach Input gefragt.
 # @param try_int: Die Variable, die von Str / Float / Bin to Int Konvertiert wird.
@@ -87,6 +92,63 @@ def check_int(try_int):
       print("Please do only use even numbers.")
 
 # -----UI-----
+=======
+# ----- Tastatur Steuerung -----
+
+# turtle.setup(800,600)
+
+def moveup():
+  turtle.seth(90)
+  turtle.forward(5)
+def movedown():
+  turtle.seth(270)
+  turtle.forward(5)
+def moveleft():
+  turtle.seth(180)
+  turtle.forward(5)
+def moveright():
+  turtle.seth(0)
+  turtle.forward(5)
+
+def selberZeichnen():
+  print("Du kannst jetzt mit den Pfeiltasten selbst malen")
+  turtle.listen()
+
+turtle.onkey(moveup,"Up")
+turtle.onkey(movedown,"Down")
+turtle.onkey(moveleft,"Left")
+turtle.onkey(moveright,"Right")
+
+
+def Pendown():
+  turtle.pendown()
+
+def Penup():
+  turtle.penup()
+
+
+
+#turtle.onkey(red,"r")
+#turtle.onkey(blue,"b")
+#turtle.onkey(green,"g")
+#turtle.onkey(yellow,"y")
+#turtle.onkey(purple,"p")
+#turtle.onkey(orange,"o")
+#turtle.onkey(black,"space")
+#turtle.onkey(Penup,"1")
+#turtle.onkey(Pendown,"2")
+
+
+
+
+
+
+
+
+
+
+# ----- UI -----
+>>>>>>> 5e7f6910e04640c68e82978ae9728b52827db9e0
 
 while True:
   print("")
