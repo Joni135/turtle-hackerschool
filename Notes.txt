@@ -1,0 +1,29 @@
+1. Userinterface (UI) - Kein GUI (Jonathan)
+    - Titel des Programms festlegen und erstellen (Text später vielleicht assci)
+    - While true schleife (über Tasteneingaben Funktionen abrufen über das Terminal)
+    - Hilfestellung für die Nutzung des Programms
+
+2. Mehr Formen (z. B. Stern, Mensch) (Jonathan)
+    - Form überlegen
+    - Implementation skizzieren
+    - Impelmentation durchführen
+
+3. Malprogramm, Freihand steuern (Anmerkung: Pfeiltasten ist einfacher) Samuel
+   - Dokumentation durchsuchen und mögliche Lösungen finden
+   - Implemtation planen (Test klasse (git branch), How to angucken)
+   - Implentation durchführen
+
+4. Version Control (z. B. GitHub (github.com/) ) Jonathan
+    - Github konto erstellen und verknüpfen
+
+5. Ein Bild malen zu lassen(oder ein Symbol)
+   - Samuel
+
+6. Test 
+
+
+Jonathan: 1
+
+Samuel: 2
+
+Siyuan:3
