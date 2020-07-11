@@ -78,7 +78,6 @@ def house(height_rectangle, width):
   turtle.pencolor("#000000")
   rectangle(-width/3, -height_rectangle/2)
 
-<<<<<<< HEAD
 # Die Funktion check_int konvertiert Strings, Floats oder Binärwerte in Integer, wenn dies möglich ist.
 # Sollte es nicht möglich sein, wird nochmal nach Input gefragt.
 # @param try_int: Die Variable, die von Str / Float / Bin to Int Konvertiert wird.
@@ -92,7 +91,6 @@ def check_int(try_int):
       print("Please do only use even numbers.")
 
 # -----UI-----
-=======
 # ----- Tastatur Steuerung -----
 
 # turtle.setup(800,600)
@@ -148,7 +146,6 @@ def Penup():
 
 
 # ----- UI -----
->>>>>>> 5e7f6910e04640c68e82978ae9728b52827db9e0
 
 while True:
   print("")
@@ -226,8 +223,6 @@ while True:
       shape_input_house_height = ""
       check_int(shape_input_house_height)
 
-  # Color
-  if welcome_input = "C":
-    print("What color do you want to change?")
-    print(" <B>: Background")
-    print(" <P>: Pen")
+  # Arrow key drawing
+  if shape_input == "F":
+    selberZeichnen()
