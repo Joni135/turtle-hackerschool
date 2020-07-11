@@ -74,13 +74,30 @@ def house(height_rectangle, width):
   turtle.pencolor("#000000")
   rectangle(-width/3, -height_rectangle/2)
 
+# Die Funktion check_int konvertiert Strings, Floats oder Binärwerte in Integer, wenn dies möglich ist.
+# Sollte es nicht möglich sein, wird nochmal nach Input gefragt.
+# @param try_int: Die Variable, die von Str / Float / Bin to Int Konvertiert wird.
+def check_int(try_int):
+  while True:
+    try_int = input()
+    try:
+      try_int = int(try_int)
+      return try_int
+    except:
+      print("Please do only use even numbers.")
+
 # -----UI-----
 
 while True:
   print("")
   print("Welcome to the Turtle Demo.")
-  print("Press <D> to draw a shape, <F> to freehand with arrow keys, <C> to change colors or press <Q> to quit.")
-  welcome_input = input()
+  print("What do you want to do?")
+  print(" <D>: Create shape")
+  print(" <C>: Change color")
+  print(" <F>: Draw with arrow keys")
+  print(" <Q>: Quit")
+  welcome_input = str.upper(input())
+  # Shapes
   if welcome_input == "D":
     print("")
     print("What Shape do you wan't to draw?")
@@ -88,81 +105,67 @@ while True:
     print(" <C>: Circle")
     print(" <S>: Square")
     print(" <T>: Triangle")
-    print(" <I>: Isosceles_triangle")
+    print(" <I>: Isosceles triangle")
     print(" <H>: House")
     shape_input = str.upper(input())
     # Rectangle
     if shape_input == "R":
       print("")
       print("What horizontal size should your rectangle have?")
-      while True:
-        shape_input_rectangle_hor = input()
-        try:
-          shape_input_rectangle_hor = int(shape_input_rectangle_hor)
-          break
-        except:
-          print("Please use an even number.")
+      shape_input_rectangle_hor = ""
+      check_int(shape_input_rectangle_hor)
       print("What vertical size should your rectangle have?")
-      while True:
-        shape_input_rectangle_ver = input()
-        try:
-          shape_input_rectangle_ver = int(shape_input_rectangle_ver)
-          break
-        except:
-          print("Please use an even number.")
+      shape_input_rectangle_ver = ""
+      check_int(shape_input_rectangle_ver)
       print("Your rectangle is now beeing drawn.")
       rectangle(shape_input_rectangle_hor, shape_input_rectangle_ver)
       #Circle
-    elif shape_input == "C":
+    if shape_input == "C":
       print("")
       print("What size should your circle have?")
-      while True:
-        shape_input_circle = input()
-        try:
-          shape_input_circle = int(shape_input_circle)
-          break
-        except:
-          print("Please use an even number.")
+      shape_input_circle = ""
+      check_int(shape_input_circle)
       print("Your circle is now beeing drawn.")
       turtle.circle(shape_input_circle)
     # Square
-    elif shape_input == "S":
+    if shape_input == "S":
       print("")
       print("What size should your square have?")
-      shape_input_square = input()
-      while True:
-        try:
-          shape_input_square = int(shape_input_square)
-          break
-        except:
-          print("Please use an even number.")
+      shape_input_square = ""
+      check_int(shape_input_square)
       print("Your square is beeing drawn.")
       square(shape_input_square)
     # Triangle
-    elif shape_input == "T":
+    if shape_input == "T":
       print("")
       print("What length should line A have on your triangle?")
-      shape_input_triangle_a = input()
-      while True:
-        try:
-          shape_input_triangle_a = int(shape_input_triangle_a)
-          break
-        except:
-          print("Please do only use even numbers.")
+      shape_input_triangle_a = ""
+      check_int(shape_input_triangle_a)
       print("What length should line B have on your triangle?")
-      shape_input_triangle_b = input()
-      while True:
-        try:
-          shape_input_triangle_b = int(shape_input_triangle_b)
-          break
-        except:
-          print("Please do only use even numbers.")
+      shape_input_triangle_b = ""
+      check_int(shape_input_triangle_b)
       print("What angle should be inbetween line A and B?")
-      shape_input_triangle_angle = input()
-      while True:
-        try:
-          shape_input_triangle_angle = int(shape_input_triangle_angle)
-          break
-        except:
-          print("Please do only use even numbers.")
+      shape_input_triangle_angle = ""
+      check_int(shape_input_triangle_angle)
       print("Your triangle is beeing drawn.")
+      triangle(shape_input_triangle_a, shape_input_triangle_b, shape_input_triangle_angle)
+    # Isosceles_triangle
+    if shape_input == "I":
+      print("How big should your isosceles triangle be?")
+      shape_input_isoceles_triangle = ""
+      check_int(shape_input_isoceles_triangle)
+      isosceles_triangle(shape_input_isoceles_triangle)
+    # House
+    if shape_input == "H":
+      print("How wide should your house be?")
+      shape_input_house_wide = ""
+      check_int(shape_input_house_wide)
+      print("How high should your house be?")
+      shape_input_house_height = ""
+      check_int(shape_input_house_height)
+
+  # Color
+  if welcome_input = "C":
+    print("What color do you want to change?")
+    print(" <B>: Background")
+    print(" <P>: Pen")
