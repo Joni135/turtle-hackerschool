@@ -75,4 +75,41 @@ def house(height_rectangle, width):
   rectangle(-width/3, -height_rectangle/2)
 turtle.bgcolor("#8888FF")
 
-house(10000, 10000)
+# -----UI-----
+
+while True:
+  print("")
+  print("Welcome to the Turtle Demo.")
+  print("Press <D> to draw a shape, <F> to freehand with arrow keys or press <Q> to quit.")
+  welcome_input = input()
+  if welcome_input == "D":
+    print("")
+    print("What Shape do you wan't to draw?")
+    print(" <R>: Rectangle")
+    print(" <C>: Circle")
+    print(" <S>: Square")
+    print(" <T>: Triangle")
+    print(" <I>: Isosceles_triangle")
+    print(" <H>: House")
+    print(" other go up one layer")
+    shape_input = input()
+    if shape_input == "R":
+      print("")
+      print("What horizontal size should your rectangle have?")
+      while True:
+        shape_input_rectangle_hor = input()
+        try:
+          shape_input_rectangle_hor = int(shape_input_rectangle_hor)
+          break
+        except:
+          print("Please use an even number.")
+      print("What vertical size should your rectangle have?")
+      while True:
+        shape_input_rectangle_ver = input()
+        try:
+          shape_input_rectangle_ver = int(shape_input_rectangle_ver)
+          break
+        except:
+          print("Please use an even number.")
+      print("Your rectangle is now beeing drawn.")
+      rectangle(shape_input_rectangle_hor, shape_input_rectangle_ver)
