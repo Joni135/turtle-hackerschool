@@ -15,11 +15,15 @@
 
 4. Version Control (z. B. GitHub (github.com/) ) Jonathan
     - Github konto erstellen und verknüpfen
+    Boah Version Control mit Github + Repl.it ist so scheiße. Es funktioniert gut, aber es geht viel zu leicht viel zu schnell kaputt.
 
 5. Ein Bild malen zu lassen(oder ein Symbol)
    - Samuel
 
-6. Test 
+6. N-Eck Samuel
+  - n-Eck wobei n für die Anzahl der Ecken steht
+  - Implementation überlegen
+  - durchführen
 
 
 Jonathan: 1
